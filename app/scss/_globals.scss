@@ -1,0 +1,28 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 5rem 1.5rem;
+	font-family: 'Rubik', sans-serif;
+	background-color: $veryDarkBlue;
+	color: $white;
+}
+
+// Text
+
+h1, h2, h3 {
+	margin-top: 0px;
+	font-weight: 400;
+	line-height: 1.15;
+}
+
+a, a:visited, a:hover {
+	text-decoration: none;
+}
