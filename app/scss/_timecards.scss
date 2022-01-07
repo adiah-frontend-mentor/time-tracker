@@ -46,7 +46,6 @@
 			position: relative;
 			display: flex;
 			flex-direction: column;
-			// justify-content: space-between;
 			padding: 1.9375rem 1.25rem 1.9375rem 1.625rem;
 
 			background-color: $darkBlue;
@@ -54,6 +53,13 @@
 
 			width: 100%;
 			top: -18px;
+
+			transition: background-color 150ms ease-in-out;
+
+			&:hover {
+				cursor: pointer;
+				background-color: #34397b;
+			}
 
 			.top {
 				display: flex;
@@ -65,6 +71,16 @@
 					color: $white;
 					font-weight: 400;
 					margin: 0 0 1rem 0;
+				}
+
+				.menu-link {
+					svg path {
+						transition: fill 150ms ease-in-out;
+					}
+
+					&:hover svg path {
+						fill: $white;
+					}
 				}
 			}
 
@@ -89,16 +105,6 @@
 				}
 			}
 
-			// &::before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	top: -10px;
-			// 	left: 0px;
-			// 	background-color: $lightOrange;
-			// 	background-image:
-			// 		url('../../images/icon-work.svg');
-			// 	height: 25px;
-			// }	
 		}
 		
 	}
