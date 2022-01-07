@@ -1,0 +1,272 @@
+.page-container {
+
+	@include breakpoint-up(large){
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 1.75rem;
+		align-items: stretch;
+		grid-template-areas: 
+		"prof timecards"
+		"prof timecards";
+	}
+
+	.profile{
+		margin-bottom: 1.375rem;
+
+		&__top {
+			// position: relative;
+			background-color: $blue;
+			padding: 2.1875rem 1.9375rem;
+			display: flex;
+			align-items: center;
+			border-radius: 12px;
+
+			@include breakpoint-up(large){
+				padding: 2.1875rem 5rem 7.563rem 2rem;
+				flex-direction: column;
+				align-items: start;
+			}
+
+			img {
+				width: 4rem;
+				height: 4rem;
+				border: 3px solid $white;
+				border-radius: 100%;
+				margin-right: 1.25rem;
+
+				@include breakpoint-up(large){
+					width: 5rem;
+					height: 5rem;
+					margin-bottom: 2.8125rem;
+				}
+			}
+
+			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: start;
+
+				p {
+					margin-top: 0;
+					margin-bottom: 0.6875rem;
+					font-size: 1rem;
+					font-weight: 400;
+					color: $paleBlue;
+				}
+				h1 {
+					margin-bottom: 0;
+					font-size: 1.5rem;
+					font-weight: 300;
+
+					@include breakpoint-up(large){
+						font-size: 2.5rem;
+					}
+				}
+			}
+		}
+
+		&__bottom {
+			// position: absolute;
+			position: relative;
+			width: 100%;
+			top: -10px;
+			display: flex;
+			justify-content: space-between;
+			// padding: 9.8125rem 1.25rem 1.5625rem 2.1875rem;
+			padding: 2.5625rem 1.25rem 1.5625rem 2.1875rem;
+			background-color: $darkBlue;
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			z-index: -999;
+
+			@include breakpoint-up(large){
+				flex-direction: column;
+				justify-content: start;
+				height: 38%;
+			}
+
+			a {
+				color: $desaturatedBlue;
+				font-size: 1.125rem;
+				font-weight: 400;
+
+				@include breakpoint-up(large){
+					// &:not(:last-of-type){
+					margin-bottom: 2rem;
+					// 	margin-bottom: 1.75rem;
+					// }
+				}
+
+				.active {
+					color: $white;
+				}
+			}
+
+		}
+
+		@include breakpoint-up(large){
+			grid-area: prof;
+			margin-bottom: 0;
+			// align-self: stretch;
+		}
+	}
+
+	.timecards {
+		@include breakpoint-up(large){
+			grid-area: timecards;
+
+			display:grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 1.75rem;
+		}
+
+		.card-wrapper {
+			@include breakpoint-up(large){
+				padding: 0;
+				margin-bottom: 0;
+			}
+
+			.background {
+
+				&.work {
+					background-color: $lightOrange;
+					background-image: url('../../images/icon-work.svg');
+				}
+
+				&.play {
+					background-color: $softBlue;
+					background-image: url('../../images/icon-play.svg');
+				}
+
+				&.study {
+					background-color: $lightRed;
+					background-image: url('../../images/icon-study.svg');
+				}
+
+				&.exercise {
+					background-color: $limeGreen;
+					background-image: url('../../images/icon-exercise.svg');
+				}
+
+				&.social {
+					background-color: $violet;
+					background-image: url('../../images/icon-social.svg');
+				}
+
+				&.self-care {
+					background-color: $softOrange;
+					background-image: url('../../images/icon-self-care.svg');
+				}
+
+
+				background-repeat: no-repeat;
+				background-position: right 17px center;
+				height: 4.1875rem;
+				border-top-left-radius: 16px;
+				border-top-right-radius: 16px;
+				margin-top: 1rem;
+
+				@include breakpoint-up(large){
+					margin: 0;
+				}
+			}
+
+			.timecard {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				// justify-content: space-between;
+				padding: 1.9375rem 1.25rem 1.9375rem 1.625rem;
+
+				background-color: $darkBlue;
+				border-radius: 16px;
+
+				width: 100%;
+				top: -18px;
+
+				@include breakpoint-up(large){
+					margin-bottom: 0;
+					height: 84%;
+				}
+
+				.top {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					@include breakpoint-up(large){
+						margin-bottom: 2.5rem;
+					}
+
+					p {
+						font-size: 1.125rem;
+						color: $white;
+						font-weight: 400;
+						margin: 0 0 1rem 0;
+
+						@include breakpoint-up(large){
+							margin: 0;
+						}
+					}
+				}
+
+				.bottom {
+					margin-bottom: 0;	
+
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					@include breakpoint-up(large){
+						flex-direction: column;
+						align-items: start;
+						justify-content: center;
+					}
+
+					h2 {
+						font-size: 1.9375rem;
+						font-weight: 300;
+						margin-bottom: 0;
+
+						@include breakpoint-up(large){
+							font-size: 3.5625rem;
+							margin-bottom: 1.5rem;
+						}
+					}
+
+					p {
+						font-size: 1rem;
+						font-weight: 300;
+						color: $paleBlue;
+						margin: 0;
+					}
+				}
+
+				// &::before {
+				// 	content: '';
+				// 	position: absolute;
+				// 	top: -10px;
+				// 	left: 0px;
+				// 	background-color: $lightOrange;
+				// 	background-image:
+				// 		url('../../images/icon-work.svg');
+				// 	height: 25px;
+				// }	
+			}
+			
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.375rem;
+
+			@include breakpoint-up(large){
+				margin: 0;
+			}
+		}
+		
+	}
+
+}
