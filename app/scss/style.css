@@ -48,6 +48,8 @@ a, a:visited, a:hover {
 }
 
 .page-container .profile__top {
+  position: relative;
+  z-index: 1;
   background-color: #5847eb;
   padding: 2.1875rem 1.9375rem;
   display: -webkit-box;
@@ -57,6 +59,7 @@ a, a:visited, a:hover {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 12px;
+  pointer-events: none;
 }
 
 @media (min-width: 64em) {
@@ -138,7 +141,6 @@ a, a:visited, a:hover {
   background-color: #1c1f4a;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  z-index: -999;
 }
 
 @media (min-width: 64em) {
@@ -160,14 +162,18 @@ a, a:visited, a:hover {
   font-weight: 400;
 }
 
+.page-container .profile__bottom a.active {
+  color: #fff;
+}
+
+.page-container .profile__bottom a:hover {
+  color: #fff;
+}
+
 @media (min-width: 64em) {
   .page-container .profile__bottom a {
     margin-bottom: 2rem;
   }
-}
-
-.page-container .profile__bottom a .active {
-  color: #fff;
 }
 
 @media (min-width: 64em) {
@@ -256,6 +262,13 @@ a, a:visited, a:hover {
   border-radius: 16px;
   width: 100%;
   top: -18px;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+}
+
+.page-container .timecards .card-wrapper .timecard:hover {
+  cursor: pointer;
+  background-color: #34397b;
 }
 
 @media (min-width: 64em) {
@@ -294,6 +307,15 @@ a, a:visited, a:hover {
   .page-container .timecards .card-wrapper .timecard .top p {
     margin: 0;
   }
+}
+
+.page-container .timecards .card-wrapper .timecard .top .menu-link svg path {
+  -webkit-transition: fill 150ms ease-in-out;
+  transition: fill 150ms ease-in-out;
+}
+
+.page-container .timecards .card-wrapper .timecard .top .menu-link:hover svg path {
+  fill: #fff;
 }
 
 .page-container .timecards .card-wrapper .timecard .bottom {
