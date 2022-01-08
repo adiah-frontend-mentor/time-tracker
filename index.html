@@ -25,15 +25,15 @@
         <img src="images/image-jeremy.png" alt="profile pic">
         <div class="text">
           <p>Report for</p>
-          <h1>Jeremy Robson</h1>
+          <h1 id="name">Jeremy Robson</h1>
         </div>
 
       </div>
 
       <div class="profile__bottom">
-        <a href="#">Daily</a>
-        <a class="active" href="#">Weekly</a>
-        <a href="#">Monthly</a>
+        <a class="time" data-timeframe="daily" href="#">Daily</a>
+        <a class="time active" data-timeframe="weekly" href="#">Weekly</a>
+        <a class="time" data-timeframe="monthly" href="#">Monthly</a>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="work" class="bottom">
             <h2>32hrs</h2>
             <p>Last Week - 36hrs</p>
           </div>
@@ -73,7 +73,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="play" class="bottom">
             <h2>10hrs</h2>
             <p>Last Week - 8hrs</p>
           </div>
@@ -94,7 +94,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="study" class="bottom">
             <h2>4hrs</h2>
             <p>Last Week - 7hrs</p>
           </div>
@@ -115,7 +115,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="exercise" class="bottom">
             <h2>4hrs</h2>
             <p>Last Week - 5hrs</p>
           </div>
@@ -135,7 +135,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="social" class="bottom">
             <h2>5hrs</h2>
             <p>Last Week - 10hrs</p>
           </div>
@@ -155,7 +155,7 @@
             </a>
           </div>
 
-          <div class="bottom">
+          <div id="selfCare" class="bottom">
             <h2>2hrs</h2>
             <p>Last Week - 2hrs</p>
           </div>
@@ -169,6 +169,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="app/js/script.js"></script>
+
 </body>
 </html>
 
